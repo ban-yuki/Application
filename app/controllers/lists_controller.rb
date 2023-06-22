@@ -19,6 +19,7 @@ class ListsController < ApplicationController
   end
 
   def edit
+    @list = List.find(params[:id])
   end
   
   private
@@ -26,3 +27,4 @@ class ListsController < ApplicationController
     params.require(:list).permit(:title, :body)
   end 
 end
+
